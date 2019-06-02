@@ -1,0 +1,5 @@
+package com.skill.eventtracker.entities;
+
+public class Jump {
+
+}

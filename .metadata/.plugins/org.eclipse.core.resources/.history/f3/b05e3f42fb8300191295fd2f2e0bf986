@@ -1,0 +1,22 @@
+package com.skill.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.skill.eventtracker.entities.Jump;
+import com.skill.repositories.JumpRepository;
+
+
+public class JumpServiceImpl implements JumpService {
+	
+	@Autowired
+	private JumpRepository repo;
+
+	@Override
+	public List<Jump> getAllJumps() {
+		
+		return repo.findAll();
+	}
+
+}

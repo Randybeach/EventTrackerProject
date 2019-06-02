@@ -1,0 +1,13 @@
+package com.skill.services;
+
+import antlr.collections.List;
+
+public class JumpServiceImpl implements JumpService {
+
+	@Override
+	public List getAllJumps() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

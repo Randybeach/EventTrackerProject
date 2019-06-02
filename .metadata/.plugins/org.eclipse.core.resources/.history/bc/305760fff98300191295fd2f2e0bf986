@@ -1,0 +1,20 @@
+package com.skill.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.skill.repositories.JumpRepository;
+
+import antlr.collections.List;
+
+public class JumpServiceImpl implements JumpService {
+	
+	@Autowired
+	private JumpRepository repo;
+
+	@Override
+	public List getAllJumps() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

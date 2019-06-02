@@ -1,0 +1,29 @@
+package com.skill.tests;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+@RunWith(SpringRunner.class)
+@SpringBootTest
+class JumpRepoTests {
+	
+	@Autowired
+	private JumpRepository repo;
+	
+	@Test
+	public void test_jump_mapping() {
+		assertEquals("", repo.findAll().get(0).getAltitude());
+	}
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}
+
+
+	
+	
+	
+
