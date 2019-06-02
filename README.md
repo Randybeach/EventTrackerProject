@@ -14,7 +14,7 @@ MAMP
 ### How To Operate
 The app is located at http://3.14.21.223/:8080/jumptracker
 
-#### api routes
+#### API Routes
 get all jumps -> jumps
 get a jump by its id -> jumps/id
 save a jump -> jumps
