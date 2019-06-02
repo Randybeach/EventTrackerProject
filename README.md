@@ -12,7 +12,7 @@ Postman
 MAMP
 
 ### How To Operate
-The app is located at http://3.14.21.223/:8080/jumptracker
+The app is located at http://3.14.21.223:8080/jumptracker
 
 #### API Routes
 get all jumps -> jumps
