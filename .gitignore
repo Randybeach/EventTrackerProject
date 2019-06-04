@@ -1,6 +1,10 @@
 .DS_Store
-bin
-build
+Servers
 target
-*.war
+build
+bin
+.metadata
+# .settings
 .gradle
+*.war
+*.bak
