@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Jump } from '../models/jump';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JumpService {
 
-  private url = "http://localhost:8084/api/jumps";
+  // private url = "http://localhost:8084/api/jumps"; development
+  // private url = "/jumptracker/"; // production
+  private url =  environment.url + "api/jumps"; // production
 
   constructor(private http: HttpClient) { }
 

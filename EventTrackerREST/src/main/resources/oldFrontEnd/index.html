@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jump Log</title>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<form action="" name="addJump">
+	Date<input type="text" name="date"><br>
+	Location<input type="text" name="location"><br>
+	Type<input type="text" name="type"><br>
+	Altitude<input type="text" name="altitude"><br>
+	Delay<input type="text" name="delay"><br>
+	Description<input type="text" name="description"><br>
+	<button value="submit" name="submit" >Submit</button>
+	</form>
+	<div id="jumps"></div>
+	<div id="detail"></div>
+	<form name="editJump" style="visibility: hidden"> 
+		Date<input type="text" name="editDate"><br>
+		Location<input type="text" name="editLocation"><br>
+		Type<input type="text" name="editType"><br>
+		Altitude<input type="text" name="editAltitude"><br>
+		Delay<input type="text" name="editDelay"><br>
+		Description<input type="text" name="editDescription"><br>
+		<button value="submit" name="editSubmit">Submit</button>
+	</form>
+	<div id="totals"></div>
+</body>
+</html>
