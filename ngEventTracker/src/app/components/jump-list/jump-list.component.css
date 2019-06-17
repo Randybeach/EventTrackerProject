@@ -1,0 +1,28 @@
+.location, .badge{
+  cursor: pointer;
+}
+thead{
+  text-align: left;
+}
+td{
+  padding-right: 50px;
+  text-align: left;
+}
+#desc{
+  width: 300px;
+}
+body{
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1521673252667-e05da380b252?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+}
+
+.inner{
+  max-height: 500px;
+  overflow: scroll;
+}
+li{
+  float: right;
+}
+
+

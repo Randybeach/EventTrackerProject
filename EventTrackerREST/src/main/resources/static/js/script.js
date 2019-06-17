@@ -44,7 +44,7 @@ function displayJumps(jumps) {
 		var row = document.createElement('tr');
 		row.value = value;
 		var td = document.createElement('td');
-
+		console.log('***'+value);
 		row.addEventListener('click', loadDetailView);
 
 		td.value = value;

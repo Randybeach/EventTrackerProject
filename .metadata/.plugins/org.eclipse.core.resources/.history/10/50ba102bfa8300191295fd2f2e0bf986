@@ -1,9 +1,0 @@
-package com.skill.services;
-
-import antlr.collections.List;
-
-public interface JumpService {
-
-	List getAllJumps();
-
-}

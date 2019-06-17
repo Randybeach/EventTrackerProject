@@ -12,11 +12,12 @@ This is a skydive jump tracker allowing users to keep a digital jump log accessi
 * MAMP
 * REST
 * Javascript
+* Angular
 
 ---
 
 ### How To Operate
-The app is located at http://3.14.21.223:8080/
+The app is located at http://3.14.21.223:8080/jumps
 
 #### API Routes
 |Route  |Function |

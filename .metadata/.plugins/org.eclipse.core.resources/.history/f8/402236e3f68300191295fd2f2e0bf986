@@ -1,9 +1,0 @@
-package com.skill.tests;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.skill.eventtracker.entities.Jump;
-
-public interface JumpRepositoryTests extends JpaRepository<Jump, Integer> {
-
-}

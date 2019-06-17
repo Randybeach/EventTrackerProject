@@ -1,0 +1,84 @@
+<body>
+
+
+  <div class='container'>
+    <div class='inner'>
+
+      <h1> Jump Log</h1>
+
+      <div>
+        <span class="badge badge-pill badge-info" (click)='orderByDate()'>Order By Date</span>
+        <span class="badge badge-pill badge-info" (click)='orderByLocation()'>Order By Location</span>
+        <span class="badge badge-pill badge-info" (click)='orderByAltitude()'>Order By Altitude</span>
+      </div>
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" *ngFor='let jump of jumps' id='acordian'>
+        <ngb-panel title={{jump.location}} class="collapse">
+          <ng-template ngbPanelContent>
+            <table>
+              <thead>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Altitude</th>
+                <th>Delay</th>
+                <th>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{jump.date | date: 'shortDate'}}</td>
+                  <td>{{jump.type}}</td>
+                  <td>{{jump.altitude}} ft</td>
+                  <td>{{jump.delay}}</td>
+                  <td>{{jump.description}}</td>
+                </tr>
+                <div *ngIf="!showEditFormB">
+
+                  <span class="badge badge-pill badge-danger" (click)='deleteJump(jump.id)'>Delete</span> &nbsp;
+                  <span class="badge badge-pill badge-info" (click)='showEditForm()'>Edit</span>
+
+                </div>
+              </tbody>
+            </table>
+            <div *ngIf="showEditFormB">
+              <h4>Edit</h4> <br>
+              <form>
+                <input type='text' name='location' [(ngModel)]="jump.location" placeholder="location"><br>
+                <input type='date' name='date' [(ngModel)]="jump.date" placeholder="date"><br>
+                <input type='text' name='type' [(ngModel)]="jump.type" placeholder="type"><br>
+                <input type='text' name='altitude' [(ngModel)]="jump.altitude" placeholder="altitude"><br>
+                <input type='text' name='delay' [(ngModel)]="jump.delay" placeholder="delay"><br>
+                <input id='desc' type='text' name='description' [(ngModel)]="jump.description"
+                  placeholder="description"><br>
+                <span class="badge badge-pill badge-info" (click)='hideEditForm()'>Cancel</span> &nbsp;
+                <span class="badge badge-pill badge-success" (click)='updateJump(jump)'>Submit</span>
+              </form>
+            </div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+
+
+
+    </div>
+    <span class="badge badge-pill badge-info" (click)='showJumpForm()'>Add Jump</span>
+    <form *ngIf="showJumpFormB">
+      <input type='text' name='location' [(ngModel)]="newJump.location" placeholder="location">
+      <input type='date' name='date' [(ngModel)]="newJump.date" placeholder="date">
+      <input type='text' name='type' [(ngModel)]="newJump.type" placeholder="type">
+      <input type='text' name='altitude' [(ngModel)]="newJump.altitude" placeholder="altitude">
+      <input type='text' name='delay' [(ngModel)]="newJump.delay" placeholder="delay"><br>
+      <input id='desc' type='text' name='description' [(ngModel)]="newJump.description" placeholder="description"><br>
+      <span class="badge badge-pill badge-info" (click)='showJumpForm()'>Cancel</span> &nbsp;
+      <span class="badge badge-pill badge-success" (click)='addJump(newJump)'>Submit</span>
+    </form>
+
+    <div class='row justify-content-md-center'>
+      <div class='col-md-auto'>
+        <ul class="list-group">
+          <li class="list-group-item">{{numJumps}} Jumps</li>
+          <li class="list-group-item">{{fallen | number}} ft fallen</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

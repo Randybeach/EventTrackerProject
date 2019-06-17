@@ -1,5 +1,0 @@
-package com.skill.services;
-
-public class Jump implements JumpService {
-
-}

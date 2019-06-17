@@ -1,9 +1,0 @@
-package com.skill.services;
-
-import java.util.List;
-
-public interface JumpService {
-
-	List<Jump> getAllJumps();
-
-}
