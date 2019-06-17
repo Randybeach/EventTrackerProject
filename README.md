@@ -18,7 +18,7 @@ This is a skydive jump tracker allowing users to keep a digital jump log accessi
 
 ### How To Operate
 
-The app is located at http://3.14.21.223:8080/jumptracker/jumps
+The app is located at http://3.14.21.223:8080/jumptracker
 
 
 
